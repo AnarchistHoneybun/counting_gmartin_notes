@@ -20,22 +20,17 @@ Also written as $""_n C_r$ or $binom(n,r)$.
 
 == Quickies - I
 
-*1.* Using the addition principle: $6 + 8 = 14$ ways.
+*1.* Addition principle: $6 + 8 = 14$ ways.
 
-*2.* Same logic as problem 1: $6 + 8 = 14$ ways.
+*2.* Same principle, although different fruits are indistinguishable in their own class: $1 + 1 = 2$ ways.
 
-*3.* We can pick any one of the three types of letters: A, B, or C. Therefore, $3$ ways.
+*3.* $3$ ways.
 
-*4.* We need to consider all possible combinations:
-- 2 B's and 0 G's: $C(3,2) = 3$ ways
-- 1 B and 1 G: $C(3,1) times C(3,1) = 3 times 3 = 9$ ways  
-- 0 B's and 2 G's: $C(3,2) = 3$ ways
+*4.* 2 B's, 2 G's, or 1 B and 1 G: $3$ ways.
 
-Total: $3 + 9 + 3 = 15$ ways.
+*5.* 6 students total (3 boys + 3 girls) and we choose 2: $C(6,2) = 15$ ways.
 
-*5.* We have 6 students total (3 boys + 3 girls) and need to pick 2: $C(6,2) = 15$ ways.
-
-*6.* $C(6,5) = 6$ ways.
+*6.* $1$ way, since any orange we do not pick is indistinguishable from any other orange that we did not pick in a different scenario.
 
 *7.* $C(6,5) = 6$ ways.
 
@@ -43,20 +38,21 @@ Total: $3 + 9 + 3 = 15$ ways.
 
 *9.* We need to pick exactly 5 fruits. Let's consider picking $i$ oranges and $(5-i)$ apples where $0 <= i <= 5$:
 
-- 0 oranges, 5 apples: $C(7,0) times C(8,5) = 1 times 56 = 56$
-- 1 orange, 4 apples: $C(7,1) times C(8,4) = 7 times 70 = 490$
-- 2 oranges, 3 apples: $C(7,2) times C(8,3) = 21 times 56 = 1176$
-- 3 oranges, 2 apples: $C(7,3) times C(8,2) = 35 times 28 = 980$
-- 4 oranges, 1 apple: $C(7,4) times C(8,1) = 35 times 8 = 280$
-- 5 oranges, 0 apples: $C(7,5) times C(8,0) = 21 times 1 = 21$
+- 0 oranges, 5 apples
+- 1 orange, 4 apples 
+- 2 oranges, 3 apples
+- 3 oranges, 2 apples
+- 4 oranges, 1 apple 
+- 5 oranges, 0 apples
 
-Total: $56 + 490 + 1176 + 980 + 280 + 21 = 3003$ ways.
+Total: $6$ ways.
 
-*10.* Total ways to pick any subset from the fruits = $2^9 times 2^6 = 2^15 = 32768$ ways.
+*10.* Counting the different ways to pick each fruit:
 
-Ways to pick nothing = $1$ way.
+- For oranges: 0 to 9 (10 choices)
+- For apples: 0 to 6 (7 choices)
 
-Ways to pick at least 1 piece = $32768 - 1 = 32767$ ways.
+Therefore the total choice combinations are $10 times 7 = 70$ ways. But we have to substract the one case where we pick 0 of both fruits, so we have $70 - 1 = 69$ ways.
 
 == Permutation Formula
 
@@ -83,33 +79,33 @@ This is because for each combination of $r$ objects, there are $r!$ ways to arra
 
 == Quickies - II
 
-*1.* Using the multiplication principle: We pick 1 Latin book from 5 and 1 Greek book from 7: $5 times 7 = 35$ ways.
+*1.* Multiplication principle: We pick 1 Latin book from 5 and 1 Greek book from 7: $5 times 7 = 35$ ways.
 
-*2.* Each position in the 2-letter word can be any of the 26 letters: $26 times 26 = 676$ ways.
+*2.* Each letter can be any of the 26 letters: $26^2$ ways.
 
-*3.* First letter has 26 choices, second letter has 25 remaining choices (must be different): $26 times 25 = 650$ ways.
+*3.* Since we can't repeat letters, we have 26 choices for the first letter and 25 for the second: $26 times 25 = 650$ ways.
 
-*4.* We have 21 consonants and 5 vowels. Consonant first, then vowel: $21 times 5 = 105$ ways.
+*4.* $21 times 5 = 105$ ways.
 
-*5.* Using the multiplication principle (similar to problem 1): $3 times 8 = 24$ ways.
+*5.* $3 times 8 = 24$ ways.
 
-*6.* This is an arrangement problem. We need to arrange 2 people in 5 chairs: $P(5,2) = frac(5!,3!) = 5 times 4 = 20$ ways.
+*6.* $P(5,2) = 20$ ways. (We permute here since the arrangement matters)
 
-*7.* This is a combination problem (order doesn't matter for chairs): $C(5,2) = 10$ ways.
+*7.* $C(5,2) = 10$ ways.
 
-*8.* Similar to problem 2: $26^4 = 456776$ ways.
+*8.* $26^4$ ways.
 
-*9.* We can pick any row (5 choices) and any column (7 choices): $5 times 7 = 35$ ways.
+*9.* Pick any row (5 choices) and any column (7 choices): $5 times 7 = 35$ ways.
 
-*10.* Similar to problem 9: $m times n$ ways.
+*10.* $m times n$ ways.
 
 *11.* Coin has 2 outcomes, die has 6 outcomes: $2 times 6 = 12$ ways.
 
-*12.* Similar to problem 11, but with an additional card choice: $2 times 6 times 52 = 624$ ways.
+*12.* $2 times 6 times 52 = 624$ ways.
 
-*13.* We need to arrange 4 aces in a row: $4! = 24$ ways.
+*13.* $4!$ ways (since each ace is distinct).
 
-*14.* Similar to problem 13, but with 13 spades: $13!$ ways.
+*14.* $13!$ ways.
 
 == A Discussion Question
 
