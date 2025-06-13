@@ -283,3 +283,42 @@ Equivalently, we can fix one person's position (to eliminate rotational symmetry
 5. We have $4 + 7 + 10 = 21$ people total. Using the circular arrangement formula: $(21-1)! = 20!$ ways.
 
 6. First, arrange the 8 R's in a circle: $(8-1)! = 7!$ ways. This creates 8 gaps between consecutive R's where we can place the C's. To ensure no 2 C's are adjacent, we must choose 4 of these 8 gaps for our C's: $binom(8,4)$ ways. Total: $7! times binom(8,4)$ ways.
+
+== Homework
+
+1. $binom(11,5)$ ways.
+
+2. $binom(52,5)$ ways.
+
+3. $binom(52,13)$ ways.
+
+4. A full house requires three-of-a-kind and a pair:
+   - Choose rank for three-of-a-kind: $13$ ways
+   - Choose 3 cards from 4 of that rank: $binom(4,3)$ ways  
+   - Choose different rank for pair: $12$ ways
+   - Choose 2 cards from 4 of that rank: $binom(4,2)$ ways
+   
+   Total: $13 times binom(4,3) times 12 times binom(4,2)$ ways.
+
+5. $2^10 - 1$ ways.
+
+6. $frac(13!,4! times 4! times 4! times 1!)$ ways.
+
+7. Total ways minus same-subject pairs:
+   $binom(16,2) - binom(5,2) - binom(7,2) - binom(4,2)$ ways.
+
+8. Total combinations excluding choosing none: $6 times 8 - 1 = 47$ ways.
+
+9. Arrange 21 consonants first: $21!$ ways. This creates 22 gaps for the 5 vowels. Choose 5 gaps: $binom(22,5)$ ways. Arrange vowels in chosen positions: $5!$ ways.
+   
+   Total: $21! times binom(22,5) times 5!$ ways.
+
+10. First letter has 26 choices, each subsequent letter has 25 choices (cannot repeat previous): $26 times 25^9$ ways.
+
+11. Use complement: total 10-element subsets minus those with no consecutive letters. For no consecutive letters, we choose 10 positions from an effective alphabet of size $26 - 9 = 17$:
+    
+    $binom(26,10) - binom(17,10)$ ways.
+
+12. $7! times binom(8,5) times 5!$ ways.
+
+13. $(7-1)! times binom(7,5) times 5!$ ways.
