@@ -322,3 +322,13 @@ Equivalently, we can fix one person's position (to eliminate rotational symmetry
 12. $7! times binom(8,5) times 5!$ ways.
 
 13. $(7-1)! times binom(7,5) times 5!$ ways.
+
+== Which of These Questions Can We Answer Now
+
+1. *With repetition not allowed and order counting:* This is asking for permutations of $r$ objects from $n$ distinguishable objects. Answer: $P(n,r) = frac(n!,(n-r)!)$ ways.
+
+2. *With repetition allowed and order counting:* Each of the $r$ positions can be filled with any of the $n$ objects independently. Answer: $n^r$ ways.
+
+3. *With repetition not allowed and order not counting:* This is asking for combinations of $r$ objects from $n$ distinguishable objects. Answer: $C(n,r) = binom(n,r) = frac(n!,r!(n-r)!)$ ways.
+
+4. *With repetition allowed and order not counting:* This is combinations with repetition, solved using the stars and bars method. We need to distribute $r$ identical items among $n$ distinct categories. Answer: $binom(n+r-1,r) = binom(n+r-1,n-1)$ ways.
