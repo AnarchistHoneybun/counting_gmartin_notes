@@ -332,3 +332,107 @@ Equivalently, we can fix one person's position (to eliminate rotational symmetry
 3. *With repetition not allowed and order not counting:* This is asking for combinations of $r$ objects from $n$ distinguishable objects. Answer: $C(n,r) = binom(n,r) = frac(n!,r!(n-r)!)$ ways.
 
 4. *With repetition allowed and order not counting:* This is combinations with repetition, solved using the stars and bars method. We need to distribute $r$ identical items among $n$ distinct categories. Answer: $binom(n+r-1,r) = binom(n+r-1,n-1)$ ways.
+
+== Combinations with Repetition
+
+The number of ways to select $r$ objects from $n$ distinct types with repetition allowed is given by:
+
+#block(
+  fill: rgb("f8d7da"),
+  inset: 12pt,
+  radius: 4pt,
+  width: 100%,
+  stroke: 1pt + rgb("#ff7d8a")
+)[
+    $ binom(n+r-1,r) = binom(n+r-1,n-1) $
+]
+
+
+*Reasoning:* This problem is equivalent to distributing $r$ identical objects among $n$ distinct categories. We can visualize this using the "stars and bars" method: imagine $r$ stars (representing our selections) and $(n-1)$ bars (dividing the stars into $n$ groups for each type). For example, selecting 5 items from types A, B, C might look like: ★★|★|★★, representing 2 A's, 1 B, and 2 C's.
+
+We need to arrange $r$ stars and $(n-1)$ bars in a row, which gives us $(r + n - 1)$ total positions. We choose $r$ positions for the stars (or equivalently, $(n-1)$ positions for the bars), yielding $binom(n+r-1,r)$ arrangements.
+
+Equivalently, we can think of this as finding the number of non-negative integer solutions to $x_1 + x_2 + ... + x_n = r$, where each $x_i$ represents how many times we select type $i$.
+
+== Problems for Class
+
+1. $binom(6+k-1,k)$ ways.
+
+2. $binom(26+4-1,4)$ ways.
+
+3. Arrange 10 men first: $10!$ ways. This creates 11 gaps for the 7 women. Choose 7 gaps: $binom(11,7)$ ways. Arrange women in chosen positions: $7!$ ways.
+   
+   Total: $10! times binom(11,7) times 7!$ ways.
+
+4. Fix one man to account for circular symmetry: $(10-1)!$ ways to arrange remaining men. This creates 10 gaps around the circle. Choose 7 gaps: $binom(10,7)$ ways. Arrange women: $7!$ ways.
+   
+   Total: $9! times binom(10,7) times 7!$ ways.
+
+5. Letters: R-4, E-4, C-2, U-1, N-2, L-1, A-1, T-1, I-1, O-1 (8 vowels, 10 consonants).
+   - Arrange consonants: $frac(10!,4! times 2! times 2!)$ ways
+   - This creates 11 gaps. Choose 8 for vowels: $binom(11,8)$ ways  
+   - Arrange vowels in chosen positions: $frac(8!,4!)$ ways
+   
+   Total: $frac(11!,3! times 2! times 3! times 1! times 2!) times binom(12,8) times frac(8!,4!)$ ways.
+
+6. Total arrangements divided by vowel arrangements, times 1 (alphabetical):
+   $frac(19!,3! times 4! times 2! times 1! times 3! times 1! times 1! times 2! times 1! times 1!) times frac(4!,8!)$ ways.
+
+7. Total words minus those containing BAD: $4^5 - 3 times 4^2$ ways.
+
+8. Total arrangements minus adjacent arrangements: $8! - 7! times 2!$ ways.
+
+9. Treat Peter and Paul as one unit. Arrange 7 units in circle: $6!$ ways. Arrange Peter and Paul within unit: $2!$ ways.
+   
+   Total: $6! times 2!$ ways.
+
+10. Each nationality forms 2 pairs. Arrange $2n$ pairs: $(2n)!$ ways. Divide by $2^n$ since pairs within each nationality are indistinguishable. Assign 4 people to 4 positions per nationality: $(4!)^n$ ways.
+    
+    Total: $frac((2n)!,2^n) times (4!)^n$ ways.
+
+11. Choose toys sequentially for each child:
+    $binom(20,4) times binom(16,4) times binom(12,4) times binom(8,4) times binom(4,4) = frac(20!,(4!)^5)$ ways.
+
+12. $frac(18!,5! times 6! times 7!)$ ways.
+
+13. Groups are indistinguishable, so divide by $3!$:
+    $frac(18!,6!^3 times 3!)$ ways.
+
+14. Arrange 11 B's creates 12 gaps. Choose 7 gaps for R's: $1 times binom(12,7) times 1$ ways.
+
+15. MISSISSIPPI has M-1, I-4, S-4, P-2. Arrange non-I letters: $frac(7!,1! times 4! times 2!)$ ways. This creates 8 gaps. Choose 4 for I's: $binom(8,4)$ ways.
+    
+    Total: $frac(7!,1! times 4! times 2!) times binom(8,4)$ ways.
+
+16. $binom(5+67-1,5)$ ways.
+
+17. Let Lucky get $L = l + 7$ balls, others get $A + E + F = 23$ with $A + E <= 20$:
+    $sum_(s=0)^(20) (s+1)(24-s)$ ways.
+
+18. Find solutions to $a + b + c = 18$ with $0 <= a <= 7, 0 <= b <= 8, 0 <= c <= 9$ using inclusion-exclusion:
+    
+    $binom(18+3-1,3-1) - binom((18-8)+3-1,3-1) - binom((18-9)+3-1,3-1) - binom((18-10)+3-1,3-1) + binom((18-8-9)+3-1,3-1) + binom((18-8-10)+3-1,3-1) = 28$ ways.
+
+== Ten Problems for Homework
+
+== Five Problems for Homework
+
+1. Case 1 (P's together): Arrange M,I,I,I,I,PP in $frac(6!,4!)$ ways, then place 4 S's using stars and    bars: $binom((7-2)+4-1,4)$ ways.  
+
+  Case 2 (P's separate): Arrange M,I,I,I,I in $frac(5!,4!)$ ways, place P's in $binom(6,2)$ ways, then place S's: $binom((8-4)+4-1,4)$ ways.
+   
+   Total: $frac(6!,4!) times binom(9,4) + frac(5!,4!) times binom(6,2) times binom(7,4)$ ways.
+
+2. $binom(6+32-1,32)$ ways.
+
+3. Substitute $y_i = x_i - 1$ to get $y_1 + y_2 + y_3 + y_4 + y_5 + y_6 = 26$ with $y_i >= 0$:
+   
+   $binom(6+26-1,26)$ ways.
+
+4. Consider $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + x_7 = 32$ with $x_7 >= 1$. Substitute $y_i = x_i - 1$ for all variables to get $y_1 + y_2 + y_3 + y_4 + y_5 + y_6 + y_7 = 25$ with $y_i >= 0$:
+   
+   $binom(7+25-1,25)$ ways.
+
+5. Consider $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + x_7 = 32$ with $x_7 >= 1$. Substitute $y_7 = x_7 - 1$ to get $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + y_7 = 31$ with all variables nonnegative:
+   
+   $binom(7+31-1,31)$ ways.
