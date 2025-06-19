@@ -415,6 +415,35 @@ Equivalently, we can think of this as finding the number of non-negative integer
 
 == Ten Problems for Homework
 
+1. $binom(26+4-1,4) = binom(29,4)$ ways.
+
+2. $binom(26,4)$ ways.
+
+3. Choose 2 ranks for pairs: $binom(13,2)$ ways. Choose 2 cards from each rank: $binom(4,2)^2$ ways. Choose 1 rank from remaining 11: $binom(11,1)$ ways. Choose 1 card from that rank: $binom(4,1)$ ways.
+   
+   Total: $binom(13,2) times binom(4,2)^2 times binom(11,1) times binom(4,1)$ ways.
+
+4. Choose vowel for middle position: $5$ ways. Choose first letter from remaining 25: $25$ ways. Choose third letter from remaining 24: $24$ ways.
+   
+   Total: $5 times 25 times 24$ ways.
+
+5. Use complement: Total arrangements minus no adjacent I's. 
+   Total: $frac(11!,1! times 4! times 4! times 2!)$ ways.
+   No adjacent I's: Arrange M,S,S,S,S,P,P first in $frac(7!,4! times 2!)$ ways, place 4 I's in 8 gaps: $binom(8,4)$ ways.
+   
+   Answer: $frac(11!,1! times 4! times 4! times 2!) - frac(7!,4! times 2!) times binom(8,4)$ ways.
+
+6. $binom(12+2-1, 2)$ ways.
+
+7. Since groups of same size are indistinguishable: $frac(18!,5! times 5! times 4! times 4! times 2! times 2!)$ ways.
+
+8. Arrange objects into groups then account for indistinguishable piles: $frac((m n)!,(n!)^m times m!)$ ways.
+
+9. Choose 0-5 oranges and 0-7 apples: $(5+1)(7+1)$ ways.
+
+10. Sum arrangements for all valid selections of A's and B's (at least 1 letter):
+    $sum_(i=0)^3 sum_(j=0)^3 frac((i+j)!,i! times j!) - 1$ ways.
+
 == Five Problems for Homework
 
 1. Case 1 (P's together): Arrange M,I,I,I,I,PP in $frac(6!,4!)$ ways, then place 4 S's using stars and    bars: $binom((7-2)+4-1,4)$ ways.  
