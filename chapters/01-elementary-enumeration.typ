@@ -9,13 +9,13 @@ The number of ways to choose $r$ objects from $n$ distinct objects is given by:
   inset: 12pt,
   radius: 4pt,
   width: 100%,
-  stroke: 1pt + rgb("#ff7d8a")
+  stroke: 1pt + rgb("#ff7d8a"),
 )[
 
-    $ C(n,r) = binom(n,r) = frac(n!,(n-r)! r!) $
+  $ C(n,r) = binom(n, r) = frac(n!, (n-r)! r!) $
 ]
 
-Also written as $""_n C_r$ or $binom(n,r)$.
+Also written as $""_n C_r$ or $binom(n, r)$.
 
 
 == Quickies - I
@@ -39,10 +39,10 @@ Also written as $""_n C_r$ or $binom(n,r)$.
 9. We need to pick exactly 5 fruits. Let's consider picking $i$ oranges and $(5-i)$ apples where $0 <= i <= 5$:
 
 - 0 oranges, 5 apples
-- 1 orange, 4 apples 
+- 1 orange, 4 apples
 - 2 oranges, 3 apples
 - 3 oranges, 2 apples
-- 4 oranges, 1 apple 
+- 4 oranges, 1 apple
 - 5 oranges, 0 apples
 
 Total: $6$ ways.
@@ -63,9 +63,9 @@ The number of ways to arrange $r$ objects from $n$ distinct objects (order matte
   inset: 12pt,
   radius: 4pt,
   width: 100%,
-  stroke: 1pt + rgb("#ff7d8a")
+  stroke: 1pt + rgb("#ff7d8a"),
 )[
-    $ P(n,r) = frac(n!,(n-r)!) $
+  $ P(n,r) = frac(n!, (n-r)!) $
 ]
 
 Also written as $""_n C_r$ or $A(n,r)$.
@@ -127,7 +127,7 @@ If the dice are identical and we only care about which numbers appear, then we'r
 (5,5), (5,6),
 (6,6)
 
-This gives us $binom(6+2-1,2) = binom(7,2) = 21$ ways (stars and bars approach).
+This gives us $binom(6+2-1, 2) = binom(7, 2) = 21$ ways (stars and bars approach).
 
 *Possible Sums:*
 If we only care about the sum of the dice, there are 11 possible sums: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
@@ -141,11 +141,11 @@ The pigeonhole principle is a fundamental counting principle:
   inset: 12pt,
   radius: 4pt,
   width: 100%,
-  stroke: 1pt + rgb("#ff7d8a")
+  stroke: 1pt + rgb("#ff7d8a"),
 )[
-    If $n$ objects are placed into $m$ containers where $n > m$, then at least one container must contain more than one object.  
+  If $n$ objects are placed into $m$ containers where $n > m$, then at least one container must contain more than one object.
 
-    This can be generalized to: if $n$ objects are placed into $m$ containers, then at least one container contains at least $ceil(n/m)$ objects.
+  This can be generalized to: if $n$ objects are placed into $m$ containers, then at least one container contains at least $ceil(n/m)$ objects.
 ]
 
 == Pigeonhole Problems
@@ -164,7 +164,7 @@ The pigeonhole principle is a fundamental counting principle:
 
 7. Consider any 5 lattice points. We can partition all lattice points into 4 classes based on the parity of their coordinates:
   - Class 1: (even, even)
-  - Class 2: (even, odd)  
+  - Class 2: (even, odd)
   - Class 3: (odd, even)
   - Class 4: (odd, odd)
 
@@ -172,12 +172,12 @@ The pigeonhole principle is a fundamental counting principle:
 
   If two points $(x_1, y_1)$ and $(x_2, y_2)$ are in the same class, then their midpoint $((x_1 + x_2)/2, (y_1 + y_2)/2)$ has integer coordinates, since both $x_1 + x_2$ and $y_1 + y_2$ are even. This midpoint lies on the segment connecting the two points, so we have found a lattice point on one of our 10 segments. QED.
 
-8. Label the 6 people as vertices of a complete graph $K_6$. Color each edge red if the corresponding people know each other, blue if they are strangers. 
+8. Label the 6 people as vertices of a complete graph $K_6$. Color each edge red if the corresponding people know each other, blue if they are strangers.
 
   Pick any vertex $v$. It has 5 edges connecting to other vertices. By the pigeonhole principle, at least $ceil(5/2) = 3$ edges have the same color.
 
   Without loss of generality, assume at least 3 edges from $v$ are red, connecting $v$ to vertices $a$, $b$, and $c$. Now consider the triangle formed by $a$, $b$, and $c$:
-  - If any edge of this triangle is red, then we have a red triangle (3 mutual acquaintances)  
+  - If any edge of this triangle is red, then we have a red triangle (3 mutual acquaintances)
   - If all edges of this triangle are blue, then we have a blue triangle (3 mutual strangers)
 
   In either case, we have found the required set of 3. QED.
@@ -191,9 +191,9 @@ Ramsey theory studies the conditions under which order must appear in large enou
   inset: 12pt,
   radius: 4pt,
   width: 100%,
-  stroke: 1pt + rgb("#ff7d8a")
+  stroke: 1pt + rgb("#ff7d8a"),
 )[
-    *Ramsey Number $R(m,n)$:* The smallest number $N$ such that if we color the edges of the complete graph $K_N$ with two colors (red and blue), then either there exists a red clique of size $m$ or a blue clique of size $n$.
+  *Ramsey Number $R(m,n)$:* The smallest number $N$ such that if we color the edges of the complete graph $K_N$ with two colors (red and blue), then either there exists a red clique of size $m$ or a blue clique of size $n$.
 ]
 
 Problem 8 from the previous section demonstrates that $R(3,3) = 6$. This means that in any group of 6 people, we can always find either 3 mutual acquaintances or 3 mutual strangers, and 6 is the smallest number for which this is guaranteed.
@@ -207,13 +207,13 @@ When arranging objects where some are identical, we must account for the fact th
   inset: 12pt,
   radius: 4pt,
   width: 100%,
-  stroke: 1pt + rgb("#ff7d8a")
+  stroke: 1pt + rgb("#ff7d8a"),
 )[
-    If we have $n$ total objects consisting of $n_1$ identical objects of type 1, $n_2$ identical objects of type 2, ..., $n_k$ identical objects of type $k$, then the number of distinct arrangements is:
+  If we have $n$ total objects consisting of $n_1$ identical objects of type 1, $n_2$ identical objects of type 2, ..., $n_k$ identical objects of type $k$, then the number of distinct arrangements is:
 
-    $ frac(n!,n_1 ! times n_2 ! times ... times n_k !) $
+  $ frac(n!, n_1 ! times n_2 ! times ... times n_k !) $
 
-    where $n_1 + n_2 + ... + n_k = n$.
+  where $n_1 + n_2 + ... + n_k = n$.
 ]
 
 *Reasoning:* Start with $n!$ total arrangements, as if all objects were distinct. However, since the $n_1$ objects of type 1 can be arranged among themselves in $n_1 !$ ways without creating new distinct arrangements, we divide by $n_1 !$. Apply the same logic for each type of identical object.
@@ -226,31 +226,31 @@ This formula naturally reduces to $n!$ when all objects are distinct (each $n_i 
 
 2. All 6 letters are distinct (subscripts make them different), so we have $6! = 720$ ways.
 
-3. 3 distinct A's, 2 identical E's, and 1 F. $frac(6!,2!) = 360$ ways.
+3. 3 distinct A's, 2 identical E's, and 1 F. $frac(6!, 2!) = 360$ ways.
 
-4. We have 3 identical A's, 2 distinct E's (due to subscripts), and 1 J. The number of arrangements is $frac(6!,3!) = 120$ ways.
+4. We have 3 identical A's, 2 distinct E's (due to subscripts), and 1 J. The number of arrangements is $frac(6!, 3!) = 120$ ways.
 
-5. 3 identical A's, 2 identical E's, and 1 F. $frac(6!,3! times 2!) = 60$ ways.
+5. 3 identical A's, 2 identical E's, and 1 F. $frac(6!, 3! times 2!) = 60$ ways.
 
-6. 1 B, 3 A's, and 2 N's. $frac(6!,1! times 3! times 2!) = 60$ ways.
+6. 1 B, 3 A's, and 2 N's. $frac(6!, 1! times 3! times 2!) = 60$ ways.
 
-7. 3 A's, 2 B's, 4 C's, and 1 D. $frac(10!,3! times 2! times 4! times 1!) = 12600$ ways.
+7. 3 A's, 2 B's, 4 C's, and 1 D. $frac(10!, 3! times 2! times 4! times 1!) = 12600$ ways.
 
-8. $frac(11!,2! times 2! times 2!)$ ways.
+8. $frac(11!, 2! times 2! times 2!)$ ways.
 
-9. $frac(11!,1! times 4! times 4! times 2!)$ ways.
+9. $frac(11!, 1! times 4! times 4! times 2!)$ ways.
 
-10. 4 A's, 3 G's, and 6 distinct letters (total 13 objects). The number of arrangements is $frac(13!,4! times 3!)$.
+10. 4 A's, 3 G's, and 6 distinct letters (total 13 objects). The number of arrangements is $frac(13!, 4! times 3!)$.
 
-11. $frac(13!,4! times 3!)$ ways.
+11. $frac(13!, 4! times 3!)$ ways.
 
 12. First arrange the 3 subjects: $3!$ ways. Then arrange books within each subject: $4! times 3! times 6!$ ways. Total arrangements: $3! times 4! times 3! times 6! = 622080$.
 
-13. We need to arrange $n$ letters where $r$ are C's and $(n-r)$ are R's. The number of arrangements is $frac(n!,r!(n-r)!) = binom(n,r)$.
+13. We need to arrange $n$ letters where $r$ are C's and $(n-r)$ are R's. The number of arrangements is $frac(n!, r!(n-r)!) = binom(n, r)$.
 
-14. Selecting $r$ persons from $n$ persons is $binom(n,r) = frac(n!,r!(n-r)!)$.
+14. Selecting $r$ persons from $n$ persons is $binom(n, r) = frac(n!, r!(n-r)!)$.
 
-15. Selecting $r$ distinguishable objects from $n$ distinguishable objects is $binom(n,r) = frac(n!,r!(n-r)!)$ (This is the same as the last question, even though the objects are distinguishable. This is because the order of selection does not matter).
+15. Selecting $r$ distinguishable objects from $n$ distinguishable objects is $binom(n, r) = frac(n!, r!(n-r)!)$ (This is the same as the last question, even though the objects are distinguishable. This is because the order of selection does not matter).
 
 == Circular Arrangements
 
@@ -261,12 +261,12 @@ When arranging objects in a circle, we must account for the fact that rotations 
   inset: 12pt,
   radius: 4pt,
   width: 100%,
-  stroke: 1pt + rgb("#ff7d8a")
+  stroke: 1pt + rgb("#ff7d8a"),
 )[
-    The number of ways to arrange $n$ distinct objects in a circle is $(n-1)!$.
+  The number of ways to arrange $n$ distinct objects in a circle is $(n-1)!$.
 ]
 
-*Reasoning:* Consider any linear arrangement of $n$ people. When we place them in a circle, this single arrangement can be rotated $n$ different ways around the circle, but all these rotations represent the same circular seating arrangement. Since there are $n!$ linear arrangements, and each circular arrangement corresponds to $n$ linear arrangements, we have $frac(n!,n) = (n-1)!$ distinct circular arrangements.
+*Reasoning:* Consider any linear arrangement of $n$ people. When we place them in a circle, this single arrangement can be rotated $n$ different ways around the circle, but all these rotations represent the same circular seating arrangement. Since there are $n!$ linear arrangements, and each circular arrangement corresponds to $n$ linear arrangements, we have $frac(n!, n) = (n-1)!$ distinct circular arrangements.
 
 Equivalently, we can fix one person's position (to eliminate rotational symmetry) and arrange the remaining $(n-1)$ people in the remaining positions, giving us $(n-1)!$ arrangements.
 
@@ -282,56 +282,56 @@ Equivalently, we can fix one person's position (to eliminate rotational symmetry
 
 5. We have $4 + 7 + 10 = 21$ people total. Using the circular arrangement formula: $(21-1)! = 20!$ ways.
 
-6. First, arrange the 8 R's in a circle: $(8-1)! = 7!$ ways. This creates 8 gaps between consecutive R's where we can place the C's. To ensure no 2 C's are adjacent, we must choose 4 of these 8 gaps for our C's: $binom(8,4)$ ways. Total: $7! times binom(8,4)$ ways.
+6. First, arrange the 8 R's in a circle: $(8-1)! = 7!$ ways. This creates 8 gaps between consecutive R's where we can place the C's. To ensure no 2 C's are adjacent, we must choose 4 of these 8 gaps for our C's: $binom(8, 4)$ ways. Total: $7! times binom(8, 4)$ ways.
 
 == Homework
 
-1. $binom(11,5)$ ways.
+1. $binom(11, 5)$ ways.
 
-2. $binom(52,5)$ ways.
+2. $binom(52, 5)$ ways.
 
-3. $binom(52,13)$ ways.
+3. $binom(52, 13)$ ways.
 
 4. A full house requires three-of-a-kind and a pair:
-   - Choose rank for three-of-a-kind: $13$ ways
-   - Choose 3 cards from 4 of that rank: $binom(4,3)$ ways  
-   - Choose different rank for pair: $12$ ways
-   - Choose 2 cards from 4 of that rank: $binom(4,2)$ ways
-   
-   Total: $13 times binom(4,3) times 12 times binom(4,2)$ ways.
+  - Choose rank for three-of-a-kind: $13$ ways
+  - Choose 3 cards from 4 of that rank: $binom(4, 3)$ ways
+  - Choose different rank for pair: $12$ ways
+  - Choose 2 cards from 4 of that rank: $binom(4, 2)$ ways
+
+  Total: $13 times binom(4, 3) times 12 times binom(4, 2)$ ways.
 
 5. $2^10 - 1$ ways.
 
-6. $frac(13!,4! times 4! times 4! times 1!)$ ways.
+6. $frac(13!, 4! times 4! times 4! times 1!)$ ways.
 
 7. Total ways minus same-subject pairs:
-   $binom(16,2) - binom(5,2) - binom(7,2) - binom(4,2)$ ways.
+  $binom(16, 2) - binom(5, 2) - binom(7, 2) - binom(4, 2)$ ways.
 
 8. Total combinations excluding choosing none: $6 times 8 - 1 = 47$ ways.
 
-9. Arrange 21 consonants first: $21!$ ways. This creates 22 gaps for the 5 vowels. Choose 5 gaps: $binom(22,5)$ ways. Arrange vowels in chosen positions: $5!$ ways.
-   
-   Total: $21! times binom(22,5) times 5!$ ways.
+9. Arrange 21 consonants first: $21!$ ways. This creates 22 gaps for the 5 vowels. Choose 5 gaps: $binom(22, 5)$ ways. Arrange vowels in chosen positions: $5!$ ways.
+
+  Total: $21! times binom(22, 5) times 5!$ ways.
 
 10. First letter has 26 choices, each subsequent letter has 25 choices (cannot repeat previous): $26 times 25^9$ ways.
 
 11. Use complement: total 10-element subsets minus those with no consecutive letters. For no consecutive letters, we choose 10 positions from an effective alphabet of size $26 - 9 = 17$:
-    
-    $binom(26,10) - binom(17,10)$ ways.
 
-12. $7! times binom(8,5) times 5!$ ways.
+  $binom(26, 10) - binom(17, 10)$ ways.
 
-13. $(7-1)! times binom(7,5) times 5!$ ways.
+12. $7! times binom(8, 5) times 5!$ ways.
+
+13. $(7-1)! times binom(7, 5) times 5!$ ways.
 
 == Which of These Questions Can We Answer Now
 
-1. *With repetition not allowed and order counting:* This is asking for permutations of $r$ objects from $n$ distinguishable objects. Answer: $P(n,r) = frac(n!,(n-r)!)$ ways.
+1. *With repetition not allowed and order counting:* This is asking for permutations of $r$ objects from $n$ distinguishable objects. Answer: $P(n,r) = frac(n!, (n-r)!)$ ways.
 
 2. *With repetition allowed and order counting:* Each of the $r$ positions can be filled with any of the $n$ objects independently. Answer: $n^r$ ways.
 
-3. *With repetition not allowed and order not counting:* This is asking for combinations of $r$ objects from $n$ distinguishable objects. Answer: $C(n,r) = binom(n,r) = frac(n!,r!(n-r)!)$ ways.
+3. *With repetition not allowed and order not counting:* This is asking for combinations of $r$ objects from $n$ distinguishable objects. Answer: $C(n,r) = binom(n, r) = frac(n!, r!(n-r)!)$ ways.
 
-4. *With repetition allowed and order not counting:* This is combinations with repetition, solved using the stars and bars method. We need to distribute $r$ identical items among $n$ distinct categories. Answer: $binom(n+r-1,r) = binom(n+r-1,n-1)$ ways.
+4. *With repetition allowed and order not counting:* This is combinations with repetition, solved using the stars and bars method. We need to distribute $r$ identical items among $n$ distinct categories. Answer: $binom(n+r-1, r) = binom(n+r-1, n-1)$ ways.
 
 == Combinations with Repetition
 
@@ -342,126 +342,126 @@ The number of ways to select $r$ objects from $n$ distinct types with repetition
   inset: 12pt,
   radius: 4pt,
   width: 100%,
-  stroke: 1pt + rgb("#ff7d8a")
+  stroke: 1pt + rgb("#ff7d8a"),
 )[
-    $ binom(n+r-1,r) = binom(n+r-1,n-1) $
+  $ binom(n+r-1, r) = binom(n+r-1, n-1) $
 ]
 
 
 *Reasoning:* This problem is equivalent to distributing $r$ identical objects among $n$ distinct categories. We can visualize this using the "stars and bars" method: imagine $r$ stars (representing our selections) and $(n-1)$ bars (dividing the stars into $n$ groups for each type). For example, selecting 5 items from types A, B, C might look like: ★★|★|★★, representing 2 A's, 1 B, and 2 C's.
 
-We need to arrange $r$ stars and $(n-1)$ bars in a row, which gives us $(r + n - 1)$ total positions. We choose $r$ positions for the stars (or equivalently, $(n-1)$ positions for the bars), yielding $binom(n+r-1,r)$ arrangements.
+We need to arrange $r$ stars and $(n-1)$ bars in a row, which gives us $(r + n - 1)$ total positions. We choose $r$ positions for the stars (or equivalently, $(n-1)$ positions for the bars), yielding $binom(n+r-1, r)$ arrangements.
 
 Equivalently, we can think of this as finding the number of non-negative integer solutions to $x_1 + x_2 + ... + x_n = r$, where each $x_i$ represents how many times we select type $i$.
 
 == Problems for Class
 
-1. $binom(6+k-1,k)$ ways.
+1. $binom(6+k-1, k)$ ways.
 
-2. $binom(26+4-1,4)$ ways.
+2. $binom(26+4-1, 4)$ ways.
 
-3. Arrange 10 men first: $10!$ ways. This creates 11 gaps for the 7 women. Choose 7 gaps: $binom(11,7)$ ways. Arrange women in chosen positions: $7!$ ways.
-   
-   Total: $10! times binom(11,7) times 7!$ ways.
+3. Arrange 10 men first: $10!$ ways. This creates 11 gaps for the 7 women. Choose 7 gaps: $binom(11, 7)$ ways. Arrange women in chosen positions: $7!$ ways.
 
-4. Fix one man to account for circular symmetry: $(10-1)!$ ways to arrange remaining men. This creates 10 gaps around the circle. Choose 7 gaps: $binom(10,7)$ ways. Arrange women: $7!$ ways.
-   
-   Total: $9! times binom(10,7) times 7!$ ways.
+  Total: $10! times binom(11, 7) times 7!$ ways.
+
+4. Fix one man to account for circular symmetry: $(10-1)!$ ways to arrange remaining men. This creates 10 gaps around the circle. Choose 7 gaps: $binom(10, 7)$ ways. Arrange women: $7!$ ways.
+
+  Total: $9! times binom(10, 7) times 7!$ ways.
 
 5. Letters: R-4, E-4, C-2, U-1, N-2, L-1, A-1, T-1, I-1, O-1 (8 vowels, 10 consonants).
-   - Arrange consonants: $frac(10!,4! times 2! times 2!)$ ways
-   - This creates 11 gaps. Choose 8 for vowels: $binom(11,8)$ ways  
-   - Arrange vowels in chosen positions: $frac(8!,4!)$ ways
-   
-   Total: $frac(11!,3! times 2! times 3! times 1! times 2!) times binom(12,8) times frac(8!,4!)$ ways.
+  - Arrange consonants: $frac(10!, 4! times 2! times 2!)$ ways
+  - This creates 11 gaps. Choose 8 for vowels: $binom(11, 8)$ ways
+  - Arrange vowels in chosen positions: $frac(8!, 4!)$ ways
+
+  Total: $frac(11!, 3! times 2! times 3! times 1! times 2!) times binom(12, 8) times frac(8!, 4!)$ ways.
 
 6. Total arrangements divided by vowel arrangements, times 1 (alphabetical):
-   $frac(19!,3! times 4! times 2! times 1! times 3! times 1! times 1! times 2! times 1! times 1!) times frac(4!,8!)$ ways.
+  $frac(19!, 3! times 4! times 2! times 1! times 3! times 1! times 1! times 2! times 1! times 1!) times frac(4!, 8!)$ ways.
 
 7. Total words minus those containing BAD: $4^5 - 3 times 4^2$ ways.
 
 8. Total arrangements minus adjacent arrangements: $8! - 7! times 2!$ ways.
 
 9. Treat Peter and Paul as one unit. Arrange 7 units in circle: $6!$ ways. Arrange Peter and Paul within unit: $2!$ ways.
-   
-   Total: $6! times 2!$ ways.
+
+  Total: $6! times 2!$ ways.
 
 10. Each nationality forms 2 pairs. Arrange $2n$ pairs: $(2n)!$ ways. Divide by $2^n$ since pairs within each nationality are indistinguishable. Assign 4 people to 4 positions per nationality: $(4!)^n$ ways.
-    
-    Total: $frac((2n)!,2^n) times (4!)^n$ ways.
+
+  Total: $frac((2n)!, 2^n) times (4!)^n$ ways.
 
 11. Choose toys sequentially for each child:
-    $binom(20,4) times binom(16,4) times binom(12,4) times binom(8,4) times binom(4,4) = frac(20!,(4!)^5)$ ways.
+  $binom(20, 4) times binom(16, 4) times binom(12, 4) times binom(8, 4) times binom(4, 4) = frac(20!, (4!)^5)$ ways.
 
-12. $frac(18!,5! times 6! times 7!)$ ways.
+12. $frac(18!, 5! times 6! times 7!)$ ways.
 
 13. Groups are indistinguishable, so divide by $3!$:
-    $frac(18!,6!^3 times 3!)$ ways.
+  $frac(18!, 6!^3 times 3!)$ ways.
 
-14. Arrange 11 B's creates 12 gaps. Choose 7 gaps for R's: $1 times binom(12,7) times 1$ ways.
+14. Arrange 11 B's creates 12 gaps. Choose 7 gaps for R's: $1 times binom(12, 7) times 1$ ways.
 
-15. MISSISSIPPI has M-1, I-4, S-4, P-2. Arrange non-I letters: $frac(7!,1! times 4! times 2!)$ ways. This creates 8 gaps. Choose 4 for I's: $binom(8,4)$ ways.
-    
-    Total: $frac(7!,1! times 4! times 2!) times binom(8,4)$ ways.
+15. MISSISSIPPI has M-1, I-4, S-4, P-2. Arrange non-I letters: $frac(7!, 1! times 4! times 2!)$ ways. This creates 8 gaps. Choose 4 for I's: $binom(8, 4)$ ways.
 
-16. $binom(5+67-1,5)$ ways.
+  Total: $frac(7!, 1! times 4! times 2!) times binom(8, 4)$ ways.
+
+16. $binom(5+67-1, 5)$ ways.
 
 17. Let Lucky get $L = l + 7$ balls, others get $A + E + F = 23$ with $A + E <= 20$:
-    $sum_(s=0)^(20) (s+1)(24-s)$ ways.
+  $sum_(s=0)^(20) (s+1)(24-s)$ ways.
 
 18. Find solutions to $a + b + c = 18$ with $0 <= a <= 7, 0 <= b <= 8, 0 <= c <= 9$ using inclusion-exclusion:
-    
-    $binom(18+3-1,3-1) - binom((18-8)+3-1,3-1) - binom((18-9)+3-1,3-1) - binom((18-10)+3-1,3-1) + binom((18-8-9)+3-1,3-1) + binom((18-8-10)+3-1,3-1) = 28$ ways.
+
+  $binom(18+3-1, 3-1) - binom((18-8)+3-1, 3-1) - binom((18-9)+3-1, 3-1) - binom((18-10)+3-1, 3-1) + binom((18-8-9)+3-1, 3-1) + binom((18-8-10)+3-1, 3-1) = 28$ ways.
 
 == Ten Problems for Homework
 
-1. $binom(26+4-1,4) = binom(29,4)$ ways.
+1. $binom(26+4-1, 4) = binom(29, 4)$ ways.
 
-2. $binom(26,4)$ ways.
+2. $binom(26, 4)$ ways.
 
-3. Choose 2 ranks for pairs: $binom(13,2)$ ways. Choose 2 cards from each rank: $binom(4,2)^2$ ways. Choose 1 rank from remaining 11: $binom(11,1)$ ways. Choose 1 card from that rank: $binom(4,1)$ ways.
-   
-   Total: $binom(13,2) times binom(4,2)^2 times binom(11,1) times binom(4,1)$ ways.
+3. Choose 2 ranks for pairs: $binom(13, 2)$ ways. Choose 2 cards from each rank: $binom(4, 2)^2$ ways. Choose 1 rank from remaining 11: $binom(11, 1)$ ways. Choose 1 card from that rank: $binom(4, 1)$ ways.
+
+  Total: $binom(13, 2) times binom(4, 2)^2 times binom(11, 1) times binom(4, 1)$ ways.
 
 4. Choose vowel for middle position: $5$ ways. Choose first letter from remaining 25: $25$ ways. Choose third letter from remaining 24: $24$ ways.
-   
-   Total: $5 times 25 times 24$ ways.
 
-5. Use complement: Total arrangements minus no adjacent I's. 
-   Total: $frac(11!,1! times 4! times 4! times 2!)$ ways.
-   No adjacent I's: Arrange M,S,S,S,S,P,P first in $frac(7!,4! times 2!)$ ways, place 4 I's in 8 gaps: $binom(8,4)$ ways.
-   
-   Answer: $frac(11!,1! times 4! times 4! times 2!) - frac(7!,4! times 2!) times binom(8,4)$ ways.
+  Total: $5 times 25 times 24$ ways.
+
+5. Use complement: Total arrangements minus no adjacent I's.
+  Total: $frac(11!, 1! times 4! times 4! times 2!)$ ways.
+  No adjacent I's: Arrange M,S,S,S,S,P,P first in $frac(7!, 4! times 2!)$ ways, place 4 I's in 8 gaps: $binom(8, 4)$ ways.
+
+  Answer: $frac(11!, 1! times 4! times 4! times 2!) - frac(7!, 4! times 2!) times binom(8, 4)$ ways.
 
 6. $binom(12+2-1, 2)$ ways.
 
-7. Since groups of same size are indistinguishable: $frac(18!,5! times 5! times 4! times 4! times 2! times 2!)$ ways.
+7. Since groups of same size are indistinguishable: $frac(18!, 5! times 5! times 4! times 4! times 2! times 2!)$ ways.
 
-8. Arrange objects into groups then account for indistinguishable piles: $frac((m n)!,(n!)^m times m!)$ ways.
+8. Arrange objects into groups then account for indistinguishable piles: $frac((m n)!, (n!)^m times m!)$ ways.
 
 9. Choose 0-5 oranges and 0-7 apples: $(5+1)(7+1)$ ways.
 
 10. Sum arrangements for all valid selections of A's and B's (at least 1 letter):
-    $sum_(i=0)^3 sum_(j=0)^3 frac((i+j)!,i! times j!) - 1$ ways.
+  $sum_(i=0)^3 sum_(j=0)^3 frac((i+j)!, i! times j!) - 1$ ways.
 
 == Five Problems for Homework
 
-1. Case 1 (P's together): Arrange M,I,I,I,I,PP in $frac(6!,4!)$ ways, then place 4 S's using stars and    bars: $binom((7-2)+4-1,4)$ ways.  
+1. Case 1 (P's together): Arrange M,I,I,I,I,PP in $frac(6!, 4!)$ ways, then place 4 S's using stars and    bars: $binom((7-2)+4-1, 4)$ ways.
 
-  Case 2 (P's separate): Arrange M,I,I,I,I in $frac(5!,4!)$ ways, place P's in $binom(6,2)$ ways, then place S's: $binom((8-4)+4-1,4)$ ways.
-   
-   Total: $frac(6!,4!) times binom(9,4) + frac(5!,4!) times binom(6,2) times binom(7,4)$ ways.
+  Case 2 (P's separate): Arrange M,I,I,I,I in $frac(5!, 4!)$ ways, place P's in $binom(6, 2)$ ways, then place S's: $binom((8-4)+4-1, 4)$ ways.
 
-2. $binom(6+32-1,32)$ ways.
+  Total: $frac(6!, 4!) times binom(9, 4) + frac(5!, 4!) times binom(6, 2) times binom(7, 4)$ ways.
+
+2. $binom(6+32-1, 32)$ ways.
 
 3. Substitute $y_i = x_i - 1$ to get $y_1 + y_2 + y_3 + y_4 + y_5 + y_6 = 26$ with $y_i >= 0$:
-   
-   $binom(6+26-1,26)$ ways.
+
+  $binom(6+26-1, 26)$ ways.
 
 4. Consider $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + x_7 = 32$ with $x_7 >= 1$. Substitute $y_i = x_i - 1$ for all variables to get $y_1 + y_2 + y_3 + y_4 + y_5 + y_6 + y_7 = 25$ with $y_i >= 0$:
-   
-   $binom(7+25-1,25)$ ways.
+
+  $binom(7+25-1, 25)$ ways.
 
 5. Consider $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + x_7 = 32$ with $x_7 >= 1$. Substitute $y_7 = x_7 - 1$ to get $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + y_7 = 31$ with all variables nonnegative:
-   
-   $binom(7+31-1,31)$ ways.
+
+  $binom(7+31-1, 31)$ ways.
