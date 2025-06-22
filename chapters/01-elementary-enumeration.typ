@@ -483,3 +483,17 @@ Equivalently, we can think of this as finding the number of non-negative integer
   $binom(binom(12+2-1, 2)+5-1, 5)$ ways.
 
 == Block Walking
+
+1. $frac(16!, 10! times 6!)$ ways
+2. $frac(16!, 10! times 6!)$ paths
+3. $frac(16!, 3! times 6! times 7!)$ words
+4. $frac(16!, 3! times 6! times 7!)$ paths
+5. $frac((x+y)!, x! times y!)$ words
+6. $frac((x+y)!, x! times y!)$ paths
+7. $frac((x+y+z)!, x! times y! times z!)$ words
+8. $frac((x+y+z)!, x! times y! times z!)$ paths
+9. We have 11 vertical and 7 horizontal lines. To construct a rectangle, two of them
+  can be chosen from each oritentation: $binom(11, 2) times binom(7, 2)$
+10. $sum_(k=1)^6 (10-k+1) times (6-k+1)$ squares
+
+== Quickies
