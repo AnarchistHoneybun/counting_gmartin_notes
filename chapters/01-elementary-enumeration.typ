@@ -496,4 +496,16 @@ Equivalently, we can think of this as finding the number of non-negative integer
   can be chosen from each oritentation: $binom(11, 2) times binom(7, 2)$
 10. $sum_(k=1)^6 (10-k+1) times (6-k+1)$ squares
 
-== Quickies
+== Quickies - III
+
+1. $binom(16, 5)$
+2. $frac(7!, 3! times 4!)$
+3. $frac(7!, 3! times 4!) times binom(8, 5) times 1$
+4. $10!$
+5. $9!$
+6. $binom(7+2-1, 2)$
+7. $14! times binom(15, 9) times 9!$
+8. $binom(4+10-1, 10)$
+9. Adjust for the restriction by giving 1 can each to everyone. Now we need to distribute 18 cans
+  to 4 people, no lower bound: $binom(4+18-1, 18)$
+10.
