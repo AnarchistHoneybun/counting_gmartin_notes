@@ -482,4 +482,4 @@ Equivalently, we can think of this as finding the number of non-negative integer
 
   $binom(binom(12+2-1, 2)+5-1, 5)$ ways.
 
-== Block Walking
+== Block Walkings
