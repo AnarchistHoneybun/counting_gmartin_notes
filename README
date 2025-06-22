@@ -4,3 +4,6 @@ isbn13 - 9780387952253
 author - George E. Martin 
 publisher - Springer
 sha-256 - eb49a92704b2e1d33fd4f80d736696402c0200864ed273ca8289ea308475a3c4
+
+
+(i've shifted the working setup for this to helix+tinymist from vscode. as such, the makefile is unmaintained, and may be dropped soon. please use tinymist to render the pdf)
