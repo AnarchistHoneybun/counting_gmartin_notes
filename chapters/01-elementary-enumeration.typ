@@ -496,4 +496,4 @@ Equivalently, we can think of this as finding the number of non-negative integer
   can be chosen from each oritentation: $binom(11, 2) times binom(7, 2)$
 10. $sum_(k=1)^6 (10-k+1) times (6-k+1)$ squares
 
-== Quickies
+== Quickie
