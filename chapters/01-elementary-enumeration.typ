@@ -465,3 +465,21 @@ Equivalently, we can think of this as finding the number of non-negative integer
 5. Consider $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + x_7 = 32$ with $x_7 >= 1$. Substitute $y_7 = x_7 - 1$ to get $x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + y_7 = 31$ with all variables nonnegative:
 
   $binom(7+31-1, 31)$ ways.
+
+== Ice Cream Cones - The Double Dip
+
+1. Total flavour combos available for one icecream are $12 times 12$. After that it's simply a matter of
+  choosing with repetition amongst these:
+
+  $binom(12 times 12 + 5 - 1, 5)$ ways.
+2. $binom(12 times 12, 5)$ ways.
+3. We must find out the number of total possible scoop combinations, given that the order does
+  not matter. Then, we choose 5 of these combos:
+
+  $binom(binom(12+2-1, 2), 5)$ ways.
+4. Similar to above, and the first part of the calculation follows exactly. We simply choose with
+  repetition allowed once we have the flavour combos:
+
+  $binom(binom(12+2-1, 2)+5-1, 5)$ ways.
+
+== Block Walking
