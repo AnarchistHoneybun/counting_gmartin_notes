@@ -508,4 +508,11 @@ Equivalently, we can think of this as finding the number of non-negative integer
 8. $binom(4+10-1, 10)$
 9. Adjust for the restriction by giving 1 can each to everyone. Now we need to distribute 18 cans
   to 4 people, no lower bound: $binom(4+18-1, 18)$
-10.
+10. $binom(57+9-1, 9) - binom(57, 1)$ ways (inclusion-exclusion, but we only have to check for one can
+  violating the constraint since more than one can violating the constraint would mean we
+  picked more than 9 cans)
+11. $binom(6+5-1, 5) times binom(6+8-1, 8)$
+12. $6 times 9 -1$
+13. $1+ (binom(6, 5) times 9 -1) + (binom(7, 5) times 9^2 - 2) + (binom(8, 5) times 9^3 - 3)
+  + (binom(9, 5) times 9^4 -4)$
+14. $frac(26!, (26-5)!)$
