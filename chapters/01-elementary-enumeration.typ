@@ -525,6 +525,85 @@ Equivalently, we can think of this as finding the number of non-negative integer
 22. $binom(12+5-1, 5)$
 23. $binom(6+9-1, 9)$
 24. $11!$
-25. $1 times 1 times binom(6+7-1, 7)$
+25. $vec(6, 7, delim: angle.l)$
 
 == The Knights' Quest
+
+When choosing $q$ knights from $k$ such that there are at least $g$ unchosen
+knights between any two chosen knights (where the knights are seated in a circle), the number
+of valid selections is:
+
+#block(
+  fill: rgb("f8d7da"),
+  inset: 12pt,
+  radius: 4pt,
+  width: 100%,
+  stroke: 1pt + rgb("#ff7d8a"),
+)[
+  $ frac(k, q) times vec(q, k-(2g+1)-(q-1)-g times (q-2), delim: angle.l) $
+]
+
+== The Binomial Theorem
+
+The binomial theorem provides the expansion of $(a + b)^n$:
+
+#block(
+  fill: rgb("e2e3f3"),
+  inset: 12pt,
+  radius: 4pt,
+  width: 100%,
+  stroke: 1pt + rgb("#6c63ff"),
+)[
+  $ (a + b)^n = sum_(r=0)^(n) binom(n, r) a^r b^(n - r) $
+]
+
+This identity expresses a power of a binomial as a sum of terms involving binomial coefficients and powers of $a$ and $b$.
+
+=== Block Walking Identity
+
+The following identity connects squared binomial coefficients to a single binomial coefficient from a higher row:
+
+#block(
+  fill: rgb("fef6d7"),
+  inset: 12pt,
+  radius: 4pt,
+  width: 100%,
+  stroke: 1pt + rgb("#ffc107"),
+)[
+  $ sum_(k=0)^(n) binom(n, k)^2 = binom(2n, n) $
+]
+
+*Block walking proof:* Imagine paths on a grid from $(0, 0)$ to $(n, n)$, where each move
+is either right $(1, 0)$ or up $(0, 1)$. Each such path consists of $n$ right moves and
+$n$ up moves — a total of $2n$ steps. The total number of such paths is: $binom(2n, n)$
+
+Now consider the diagonal line $X + Y = n$. Every valid path must pass through exactly
+one point on this line. Why?
+
+- At the start: $X + Y = 0$
+- At the end: $X + Y = 2n$
+- Each move increases $X + Y$ by 1
+- So after $n$ steps, you must be at some point $(i, n - i)$ where $X + Y = n$
+
+Thus, each path passes through exactly one such midpoint.
+
+We now count how many paths pass through each point $(i, n - i)$:
+- From $(0, 0)$ to $(i, n - i)$: $binom(n, i)$
+- From $(i, n - i)$ to $(n, n)$: $binom(n, i)$
+
+So the number of full paths through $(i, n - i)$ is $binom(n, i)^2$. Summing over all
+such points gives:
+
+#block(
+  fill: rgb("f8d7da"),
+  inset: 12pt,
+  radius: 4pt,
+  width: 100%,
+  stroke: 1pt + rgb("ff7d8a"),
+)[
+  $ sum_(i=0)^(n) binom(n, i)^2 = binom(2n, n) $
+]
+
+$qed$
+
+== Homework for a Week
