@@ -509,10 +509,22 @@ Equivalently, we can think of this as finding the number of non-negative integer
 9. Adjust for the restriction by giving 1 can each to everyone. Now we need to distribute 18 cans
   to 4 people, no lower bound: $binom(4+18-1, 18)$
 10. $binom(57+9-1, 9) - binom(57, 1)$ ways (inclusion-exclusion, but we only have to check for one can
-  violating the constraint since more than one can violating the constraint would mean we
+  variety violating the constraint since more than one of them violating the constraint would mean we
   picked more than 9 cans)
 11. $binom(6+5-1, 5) times binom(6+8-1, 8)$
 12. $6 times 9 -1$
-13. $1+ (binom(6, 5) times 9 -1) + (binom(7, 5) times 9^2 - 2) + (binom(8, 5) times 9^3 - 3)
-  + (binom(9, 5) times 9^4 -4)$
+13. $binom(9, 5) times 9^4$
 14. $frac(26!, (26-5)!)$
+15. $8!$
+16. $binom(4+24-1, 24)$
+17. $13$
+18. $7$
+19. $binom(3+25-1, 25) - 3 times binom(3+(25-13)-1, (25-13))$
+20. $binom(7+(12-7)-1, (12-7))$
+21. $50!/(10!)^5$
+22. $binom(12+5-1, 5)$
+23. $binom(6+9-1, 9)$
+24. $11!$
+25. $1 times 1 times binom(6+7-1, 7)$
+
+== The Knights' Quest
