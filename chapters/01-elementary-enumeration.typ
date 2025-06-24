@@ -607,3 +607,30 @@ such points gives:
 $qed$
 
 == Homework for a Week
+
+1. $24! times vec(25, 17, delim: angle.l)$
+2. $24! times binom(23, 17)$
+3. $binom(n, m) times vec((n-m), [r-(n-m)], delim: angle.l)$
+4. $sum_(k=0)^10 vec(6, 20-2k, delim: angle.l)$
+5. $sum_(k=0)^(10) binom(20, k) times binom(2k, k) times 6^(20-2k)$
+6. $frac(6!, 2! times 2! times 1! times 1!) times [underbrace(binom(2, 2), I's) times underbrace(binom(7-2, 1), "O") +
+    underbrace(binom(2, 1), "I") times underbrace(binom(7-2, 1), "second I") times underbrace(binom(8-3, 1), "O")]$
+7. $vec(10, 62, delim: angle.l) times 10^8$
+8. $9 times 10 times 11 - 1$
+9. $frac(7!, 4! times 1! times 1! times 1!) times frac(7!, 4! times 2! times 1!)$
+10. $1 times vec(3, 3, delim: angle.l) times
+  vec(7, 3, delim: angle.l) times binom(11, 1)$
+11. $1 times vec(7, 5, delim: angle.l) times binom(5, 1)$
+12. $binom((5+7+11+14)!, 5! times 7! times 14!)$
+13. $7! times binom(8, 5) times 13!$
+14. $vec(2, 95, delim: angle.l) + vec(2, 70, delim: angle.l) + vec(2, 45, delim: angle.l) +
+  vec(2, 20, delim: angle.l)$
+15. $binom(5, 3) times [vec(2, 38-12 times 3, delim: angle.l) + vec(2, 38-11 times 32, delim: angle.l)
+    + vec(2, 38-10 times 3, delim: angle.l) + (vec(2, 38-9 times 3, delim: angle.l) - 6) +
+    (vec(2, 38-8 times 3, delim: angle.l) - 14)]$
+16. assume $n$ balls and $N$ boxes: $binom(N, 2) times [binom(N-2, 1) times
+    binom(n, 3) times (n-3)! + binom(N-2, 2) times binom(n, 4) times binom(4, 2) times (n-4)!]$
+17. $sum_(k=0)^4 vec(2, k, delim: angle.l) times vec(4, 8-k, delim: angle.l)$
+18. $sum_(k=0)^4 binom(8, k) times 2^k times 4^(8-k)$
+
+== Four Questions for Thought

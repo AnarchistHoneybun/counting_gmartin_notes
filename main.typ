@@ -16,7 +16,7 @@
   }
 })
 
-#show math.equation: set text(weight: 600)
+#show math.equation: set text(weight: "medium")
 
 // Title page
 #align(center)[
