@@ -663,3 +663,28 @@ $qed$
 18. $vec(7, 5, delim: angle.l) times binom(5, 1)$
 19. $1 times vec(3, 3, delim: angle.l) times vec(7, 3, delim: angle.l) times binom(11, 1)$
 20. $frac((5+7+11+13)!, 5! times 7! times 13!)$
+
+=== Practice Exam 2
+
+1. $frac(11!, 1! times 2! times 4! times 4!)$
+2. $9+9+7+8+1$
+3. $21! times binom(22, 5) times 5!$
+4. $binom(18, 9)$
+5. $7! times binom(8, 6) times 6!$
+6. $7! times binom(8, 2) times 2!$
+7. $binom(5, 1) times frac(25!, (25-4)!)$
+8. $frac(11!, 1! times 2! times 4! times 4!) - (frac(7!, 1! times 2! times 4!) times binom(8, 4))$
+9. $6 times 8$
+10. $vec(33, 6, delim: angle.l)$
+11. $vec(15 times 15, 7, delim: angle.l)$
+12. $vec(vec(15, 2, delim: angle.l), 7, delim: angle.l)$
+13. $vec(5, 6, delim: angle.l) times vec(5, 9, delim: angle.l)$
+14. $vec(2, 20, delim: angle.l) - (2 times vec(2, 5, delim: angle.l))$
+15. $26! times binom(25, 13)$
+16. $binom(12, 3) times vec(9, 23, delim: angle.l)$
+17. $vec(10, 62, delim: angle.l) times 10^8$
+18. $frac((6+8+13+14)!, 6! times 8! times 14!)$
+19. $26 times 25^9$
+20. $frac(9!, 2! times 4!) times ((1 times 8 times 7) + (2 times 8 times 8 times 7))$
+
+=== Practice Exam 3
