@@ -68,7 +68,7 @@ The number of ways to arrange $r$ objects from $n$ distinct objects (order matte
   $ P(n,r) = frac(n!, (n-r)!) $
 ]
 
-Also written as $""_n C_r$ or $A(n,r)$.
+Also written as $""_n P_r$ or $A(n,r)$.
 
 *Relationship between Permutation and Combination:*
 
@@ -634,3 +634,32 @@ $qed$
 18. $sum_(k=0)^4 binom(8, k) times 2^k times 4^(8-k)$
 
 == Four Questions for Thought
+
+== Three Hour Exams
+
+=== Practice Exam 1
+
+1. $26^4$
+2. $
+    26^4 - (binom(26, 1) times 1^3 times binom(25, 1)) - (binom(26, 2) times (2^3
+        - underbrace(2, "AAA or BBB")) times binom(24, 1)) - (binom(26, 3) times
+      underbrace(6, ""_3 P_3) times binom(23, 1))
+  $
+3. $7!$
+4. $8! times 5!$
+5. $vec(7, 5, delim: angle.l)$
+6. $vec(vec(7, 3, delim: angle.l), 5, delim: angle.l)$
+7. $vec(4, 7, delim: angle.l) times 4^5$
+8. $1 times vec(5, 6, delim: angle.l) times vec(11-4, 5, delim: angle.l)$
+9. $binom(4, 1) times binom(13, 2) times binom(13, 1)^3$
+10. $vec(3, 20, delim: angle.l) - (3 times vec(3, 9, delim: angle.l))$
+11. $binom(24, 3)$
+12. $vec(4, 20, delim: angle.l)$
+13. $vec(3, 22, delim: angle.l)$
+14. $vec(s, r, delim: angle.l)$
+15. $binom(20, 7)$
+16. $frac(11!, 1! times 4! times 4! times 2!)$
+17. $frac(9!, 1! times 2! times 2! times 4!)$
+18. $vec(7, 5, delim: angle.l) times binom(5, 1)$
+19. $1 times vec(3, 3, delim: angle.l) times vec(7, 3, delim: angle.l) times binom(11, 1)$
+20. $frac((5+7+11+13)!, 5! times 7! times 13!)$
