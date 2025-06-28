@@ -633,8 +633,6 @@ $qed$
 17. $sum_(k=0)^4 vec(2, k, delim: angle.l) times vec(4, 8-k, delim: angle.l)$
 18. $sum_(k=0)^4 binom(8, k) times 2^k times 4^(8-k)$
 
-== Four Questions for Thought
-
 == Three Hour Exams
 
 === Practice Exam 1
@@ -688,3 +686,30 @@ $qed$
 20. $frac(9!, 2! times 4!) times ((1 times 8 times 7) + (2 times 8 times 8 times 7))$
 
 === Practice Exam 3
+
+1. $frac(11!, 1! times 4! times 4! times 2!)$
+2. $(7+8+8+9+9) +1$
+3. $21! times binom(22, 5) times 5!$
+4. $7! times binom(8, 4) times 4!$
+5. $7! times binom(8, 6) times 6!$
+6. $7! times binom(8, 2) times 2!$
+7. $26 times 25 times 24^3$
+8. $frac(11!, 1! times 4! times 4! times 2!) times 1/2$
+9. $6 times 8$
+10. $binom(3, 1) times (5!)^2$
+11. $vec(vec(9, 2, delim: angle.l), 7, delim: angle.l)$
+12. $frac(6!, 2)$ (note: the wording in the question is a bit ambiguous, so the answer is up
+  to interpretation)
+13. $1 times binom(19, 5)$
+14. $binom(25, 6) - binom(20, 6)$
+15. $binom(20, 6)$
+16. $frac((4+6+7)!, 4! times 6! times 7!) times binom(18, 5)$
+17. $frac((5+6+7)!, 5! times 6! times 7!) times vec(14, 5, delim: angle.l)$
+18. $2! times (7!)^2$
+19. $6! times 7!$
+20. $6! times (2!)^7$
+21. $binom(5, 2) times binom(6, 2)$
+22. $binom(m, n) times frac([(m-n) + (n-1)], (n-1)!)$
+23. $frac((8+9+10+10)!, 8! times 9! times 10!)$
+24. $frac((8+9+10)!, 8! times 9! times 10!) times binom(26, 10)$
+25. $vec(11, 5, delim: angle.l) times frac((8+9+10)!, 8! times 9! times 10!)$
